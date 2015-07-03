@@ -1,1 +1,0 @@
-conole.lookfdgp()ljadnf;;;
