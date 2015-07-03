@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app="HengillApp">
+	<div ng-controller="HomeController">
+		<span>{{message}}</span>
+		<input type="text" ng-model="message" />
+		<table>
+			<tr ng-repeat="a in arr">
+				<td>{{a}}</td>
+				<div my-dirr="a"></div>
+			</tr>
+		</table>
+	</div>
+        <script src="bower_components/angular/angular.js"></script>
+	<script src="src/Hengill.js"></script>
+</body>
+
+</html>
