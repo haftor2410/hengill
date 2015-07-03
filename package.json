@@ -1,0 +1,27 @@
+{
+  "name": "hengill",
+  "version": "1.0.0",
+  "description": "cfh check-in system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haftor2410/hengill.git"
+  },
+  "keywords": [
+    "javascript",
+    "angular"
+  ],
+  "author": "Hafþór Gunnlaugsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haftor2410/hengill/issues"
+  },
+  "homepage": "https://github.com/haftor2410/hengill",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2"
+  }
+}
