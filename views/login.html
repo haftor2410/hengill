@@ -1,7 +1,34 @@
-
 <div>
+	<!-- <span>{{log}}</span> -->
+	<input type="text" ng-model="log"/>
+	<div>
+		<span>{{tempUsers[0].contractExp | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a'}}</span>
+	</div>
 
-	<p>
-		knoll is an simple online chat service. On the frontpage you choose a username. When you have choosen a username you have an option of picking a room or creating a room. Once your inside a room you can send messages on the room wall or send other users private messages.
-	</p>
+
+	<div>
+		<span>{{tempUsers[0].contractExp | amCalendar}}</span>
+	</div>
+
+<h4>Popup</h4>
+    <div class="row">
+
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="date" class="form-control" ng-model="date1" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+            </p>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="date" class="form-control" ng-model="date2" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+            </p>
+        </div>
+    </div>
+
+	<div ng-show="date1 == date2">jafnt</div>
+	<div ng-show="date1 > date2">DATE1</div>
+	<div ng-show="date1 < date2">DATE2</div>
 </div>

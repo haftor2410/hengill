@@ -1,22 +1,28 @@
 <html>
 	<head>
 		<title></title>
+		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<body ng-app="HengillApp">
-		<div ng-controller="HomeController">
-			<span>{{message}}</span>
-			<input type="text" ng-model="message" />
-			<table>
-				<tr ng-repeat="a in arr">
-					<td>{{a}}</td>
-					<div my-dirr="a"></div>
-				</tr>
-			</table>
+		<div class="appContainer">
+			<div class="col-md-12 navBar">
+				<p class="navText">Hengill</p>
+			</div>
 			<div class="view" ng-view></div>
 		</div>
+
 		<script src="bower_components/angular/angular.js"></script>
 		<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="bower_components/moment/moment.js"></script>
+		<script src="bower_components/angular-moment/angular-moment.js"></script>
+
+
 		<script src="src/app.js"></script>
+		<script type="text/javascript" src="src/homeController.js"></script>
+		<script type="text/javascript" src="src/loginController.js"></script>
 	</body>
 
 </html>
