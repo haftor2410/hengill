@@ -1,34 +1,31 @@
-<div>
-	<!-- <span>{{log}}</span> -->
-	<input type="text" ng-model="log"/>
-	<div>
-		<span>{{tempUsers[0].contractExp | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a'}}</span>
+<div class="loginContainer">
+	<div class="row">
+
+		<div class="col-md-6">
+			<p class="input-group">
+				<input type="date" class="form-control" ng-model="datePicked" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<!-- TODO: taka out the hardcode, use: currentUserId -->
+		<button type="button" class="btn btn-default" ng-model="class0600" ng-click="showUsers(1)">06:00</button>
+		<button type="button" class="btn btn-default" ng-model="class0650" ng-click="showUsers(2)">06:50</button>
+		<button type="button" class="btn btn-default" ng-model="class1115" ng-click="showUsers(3)">11:15</button>
+		<button type="button" class="btn btn-default" ng-model="class1215" ng-click="showUsers(4)">12:15</button>
+		<button type="button" class="btn btn-default" ng-model="class1630" ng-click="showUsers(5)">16:30</button>
+		<button type="button" class="btn btn-default" ng-model="class1730" ng-click="showUsers(6)">17:30</button>
+		<button type="button" class="btn btn-default" ng-model="class1830" ng-click="showUsers(7)">18:30</button>
+		<button type="button" class="btn btn-default" ng-model="class1930" ng-click="showUsers(8)">19:30</button>
 	</div>
 
-
-	<div>
-		<span>{{tempUsers[0].contractExp | amCalendar}}</span>
+	<div class="row">
+		<input type="number" class="form-control" ng-model="currentUserId" ng-keypress="login($event)" placeholder="kennitala"/>
 	</div>
-
-<h4>Popup</h4>
-    <div class="row">
-
-        <div class="col-md-6">
-            <p class="input-group">
-              <input type="date" class="form-control" ng-model="date1" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-            </p>
-        </div>
-    </div>
-    <div class="row">
-
-        <div class="col-md-6">
-            <p class="input-group">
-              <input type="date" class="form-control" ng-model="date2" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-            </p>
-        </div>
-    </div>
-
-	<div ng-show="date1 == date2">jafnt</div>
-	<div ng-show="date1 > date2">DATE1</div>
-	<div ng-show="date1 < date2">DATE2</div>
+	<div class="row">
+		<div ng-repeat="u in currentClass.users">
+			{{u.name}}
+		</div>
+		<div ng-if="currentClass.users.length === 0">Það er eingin skráður í þennan tíma</div>
+	</div>
 </div>

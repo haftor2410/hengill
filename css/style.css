@@ -1,7 +1,9 @@
 .appContainer{
 
 }
-
+.loginContainer{
+	padding: 2em;
+}
 .navBar{
 	background-color: rgb(0,0,0);
 	border-radius: 0;
