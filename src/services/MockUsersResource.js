@@ -14,7 +14,7 @@ angular.module("HengillApp")
 		id:            1,
 		contractStart: new Date(2012, 0, 12),
 		contractEnd:   new Date(2015, 0, 12),
-		myClasses:     []
+		myClasses:     [1, 2, 3, 4]
 	};
 
 	var user2  = { 
@@ -22,14 +22,14 @@ angular.module("HengillApp")
 		id:            2,
 		contractStart: new Date(2013, 0, 12),
 		contractEnd:   new Date(2015, 0, 12),
-		myClasses:     []
+		myClasses:     [1, 2, 3, 4, 5]
 	};
 	var user3  = { 
 		name:          "Rakel",
 		id:            3,
 		contractStart: new Date(2012, 0, 12),
 		contractEnd:   new Date(2015, 0, 12),
-		myClasses:     []
+		myClasses:     [1, 2, 3]
 	};
 
 	var user4  = { 
@@ -37,7 +37,7 @@ angular.module("HengillApp")
 		id:            4,
 		contractStart: new Date(2013, 0, 12),
 		contractEnd:   new Date(2015, 0, 12),
-		myClasses:     []
+		myClasses:     [1, 2]
 	};
 
 	var user5  = { 

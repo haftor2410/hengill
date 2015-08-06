@@ -4,6 +4,12 @@
 .loginContainer{
 	padding: 2em;
 }
+
+.clickable{
+	cursor: pointer;
+}
+
+
 .navBar{
 	background-color: rgb(0,0,0);
 	border-radius: 0;

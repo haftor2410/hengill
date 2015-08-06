@@ -1,7 +1,65 @@
-<div>
-	<div ng-repeat="u in allUsers">
-		{{u.name}}
-	</div>
+
+	<table class="table table-bordered table-striped table-responsive">
+		<thead>
+			<tr>
+				<th class="clickable" ng-click="sortByName()">Nafn</th>
+				<th class="clickable" ng-click="sortByStartDate()">Upphaf</th>
+				<th class="clickable" ng-click="sortByEndDate()">Endir</th>
+				<th  class="clickable"ng-click="sortByNumberOfClasses()">Tímafjöldi</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="u in allUsers">
+				<td class="clickable" ng-click="showUserInfo(u)">{{u.name}}</td>
+				<td>{{u.contractStart}}</td>
+				<td>{{u.contractEnd}}</td>
+				<td>{{u.myClasses.length}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- <input type="text" ng-model="name"/> -->
 <!-- 	<div>
 		<span>{{tempUsers[0].contractExp | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a'}}</span>
