@@ -1,22 +1,25 @@
 
-	<table class="table table-bordered table-striped table-responsive">
-		<thead>
-			<tr>
-				<th class="clickable" ng-click="sortByName()">Nafn</th>
-				<th class="clickable" ng-click="sortByStartDate()">Upphaf</th>
-				<th class="clickable" ng-click="sortByEndDate()">Endir</th>
-				<th  class="clickable"ng-click="sortByNumberOfClasses()">Tímafjöldi</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="u in allUsers">
-				<td class="clickable" ng-click="showUserInfo(u)">{{u.name}}</td>
-				<td>{{u.contractStart}}</td>
-				<td>{{u.contractEnd}}</td>
-				<td>{{u.myClasses.length}}</td>
-			</tr>
-		</tbody>
-	</table>
+<button type="button" class="btn btn-default" ng-click="addNewUser()">Nýr notandi</button>
+
+
+<table class="table table-bordered table-striped table-responsive">
+	<thead>
+		<tr>
+			<th class="clickable" ng-click="sortByName()">Nafn</th>
+			<th class="clickable" ng-click="sortByStartDate()">Upphaf</th>
+			<th class="clickable" ng-click="sortByEndDate()">Endir</th>
+			<th  class="clickable"ng-click="sortByNumberOfClasses()">Tímafjöldi</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="u in allUsers">
+			<td class="clickable" ng-click="viewUser(u)">{{u.name}}</td>
+			<td>{{u.contractStart}}</td>
+			<td>{{u.contractEnd}}</td>
+			<td>{{u.myClasses.length}}</td>
+		</tr>
+	</tbody>
+</table>
 
 
 

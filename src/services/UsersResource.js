@@ -29,7 +29,17 @@ angular.module("HengillApp")
 				}
 			};
 		},
-		newUser: function newUser(userObject) {
+		addNewUser: function addNewUser(userObject) {
+			return {
+				success: function(fn) {
+					fn(MockUsersResource.addNewUser(userObject));
+					return {
+						error: function(fn) {
+							return;
+						}
+					};
+				}
+			};
 			mockUsers.push(userObject);
 			return mockUsers;
 		},

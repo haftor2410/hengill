@@ -1,4 +1,4 @@
-var HengillApp = angular.module("HengillApp", ['ngRoute', 'angularMoment']);
+var HengillApp = angular.module("HengillApp", ['ngRoute', 'angularMoment', 'ui.bootstrap']);
 
 HengillApp.config(
 	function($routeProvider){

@@ -80,8 +80,17 @@ angular.module("HengillApp")
 				}
 			}
 		},
-		newUser: function newUser(userObject) {
-			mockUsers.push(userObject);
+		addNewUser: function addNewUser(userObject) {
+
+			var newUser  = { 
+				name:          userObject.newUserName,
+				id:            userObject.socialNumber,
+				contractStart: undefined,
+				contractEnd:   undefined,
+				myClasses:     []
+			};
+
+			mockUsers.push(newUser);
 			return mockUsers;
 		},
 		editUser: function editUser(userObject, index) {
