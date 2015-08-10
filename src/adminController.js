@@ -61,9 +61,9 @@ angular.module("HengillApp").controller("AdminController", function ($scope, $mo
 	}
 
 
-	$scope.viewUser = function(u){
-		console.log("viewUser!!!", u);
-		ViewUserDlg.show().then(function(){
+	$scope.viewUser = function(user, index){
+		console.log("viewUser!!!", user, index);
+		ViewUserDlg.show(user, index).then(function(){
 			console.log("kdbfljsdnflksndlfknasldkfna")
 		})
 	};

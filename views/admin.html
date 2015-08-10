@@ -13,7 +13,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="u in allUsers">
-			<td class="clickable" ng-click="viewUser(u)">{{u.name}}</td>
+			<td class="clickable" ng-click="viewUser(u, $index)">{{u.name}} - {{$index}}</td>
 			<td>{{u.contractStart}}</td>
 			<td>{{u.contractEnd}}</td>
 			<td>{{u.myClasses.length}}</td>
