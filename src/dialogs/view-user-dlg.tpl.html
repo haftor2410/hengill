@@ -1,4 +1,7 @@
 <div class="model-body">
+	<div class="modal-header">
+		Skoða notanda
+	</div>
 	<div>
 		{{userObject.name}}
 	</div>
@@ -6,24 +9,31 @@
 	<div>
 		{{userObject.id}}
 	</div>
-	
-	
-		<div>
-		<div>
-			<p class="input-group">
-				<input type="date" class="form-control" ng-model="startDate" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-			</p>
-		</div>
-	</div>
 	<div>
+		<div class="col-md-4">{{userObject.contractStart | date:'yyyy-MM-dd'}}</div>
+		<div class="col-md-4">{{userObject.contractEnd | date:'yyyy-MM-dd'}}</div>
+		<div  class="col-md-4">{{dayDifference}}</div>
+	</div>
+	<div ng-show="newContractBool">
 		<div>
-			<p class="input-group">
-				<input type="date" class="form-control" ng-model="endDate" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-			</p>
+			<div>
+				<p class="input-group">
+					<input type="date" class="form-control" ng-model="startDate" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+				</p>
+			</div>
+		</div>
+		<div>
+			<div>
+				<p class="input-group">
+					<input type="date" class="form-control" ng-model="endDate" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+				</p>
+			</div>
 		</div>
 	</div>
-	greiðslumáti<input type="radio">
-<button class="btn btn-default" ng-click="saveNewUser()">SAVE</button>
+	<button class="btn btn-default" ng-click="newContract()">Nýr samningur</button>
+
+	<!-- greiðslumáti<input type="radio"> -->
+<!-- <button class="btn btn-default" ng-click="saveNewUser()">SAVE</button> -->
 </div>
 <div class="modal-footer">
 	<button class="btn btn-default" ng-click="saveNewUser()">Save</button>

@@ -55,6 +55,7 @@ angular.module("HengillApp").controller("LoginController", function ($scope, Use
 	};
 
 	$scope.showUsers = function(classPicked){
+		console.log("--",$scope.datePicked);
 
 		if($scope.datePicked === undefined){
 			//TODO toster message
