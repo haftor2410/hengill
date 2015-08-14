@@ -2,57 +2,144 @@
 angular.module("HengillApp")
 .factory("MockUsersResource", function () {
 
-	// Content
-	// var mockLectureContent1 = { title: "Video from the lecture", name: "https://www.youtube.com/watch?v=C4m79m-hzfc", type: "yt", typeTip: "YouTube"};
-	// var mockLectureContent2 = { title: "Slides from the lecture on google drive", name: "https://docs.google.com/presentation/d/1-m9g7Ah8urH3dGZ1DtdcU2PQZ3nbEFi8RWtIPi6XweQ/pub?start=false&loop=false&delayms=3000&slide=id.p", type: "drive", typeTip: "GoogleDrive"};
-	// var mockLectureContent3 = { title: "Slides on pdf form", name: "https://www.youtube.com/watch?v=C4m79m-hzfc", type: "pdf", typeTip: "pdf"};
-	// var mockLectureContent4 = { title: "Slides on power point form", name: "https://www.youtube.com/watch?v=C4m79m-hzfc", type: "ppt", typeTip: "PowerPoint"};
+	// Users
+	// var user1  = { 
+	// 	name:          "Haftor",
+	// 	id:            1,
+	// 	contractStart: new Date(2012, 11, 1).toString().substring(4,15),
+	// 	contractEnd:   new Date(2016, 0, 1).toString().substring(4,15),
+	// 	remaining:     undefined,
+	// 	myClasses:     [1, 2, 3, 4]
+	// };
 
 	// Users
 	var user1  = { 
 		name:          "Haftor",
 		id:            1,
-		contractStart: new Date(2012, 11, 12),
-		contractEnd:   new Date(2015, 0, 1),
+		newestContract: {
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2016, 0, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2016, 0, 1)
+		},
+		allContracts: [{
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2016, 0, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2016, 0, 1)
+			}
+		],
+		remaining:     undefined,
 		myClasses:     [1, 2, 3, 4]
 	};
 
 	var user2  = { 
 		name:          "Arnar",
 		id:            2,
-		contractStart: new Date(2013, 10, 2),
-		contractEnd:   new Date(2015, 0, 12),
+		newestContract: {
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2015, 0, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2015, 0, 1)
+		},
+		allContracts: [{
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2015, 0, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2015, 0, 1)
+			}
+		],
+		remaining:     undefined,
 		myClasses:     [1, 2, 3, 4, 5]
 	};
 	var user3  = { 
 		name:          "Rakel",
 		id:            3,
-		contractStart: new Date(2012, 0, 4),
-		contractEnd:   new Date(2015, 0, 12),
+		newestContract: {
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2017, 0, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2017, 0, 1)
+		},
+		allContracts: [{
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2017, 0, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2017, 0, 1)
+			}
+		],
+		remaining:     undefined,
 		myClasses:     [1, 2, 3]
 	};
 
 	var user4  = { 
 		name:          "Lara",
 		id:            4,
-		contractStart: new Date(2013, 0, 12),
-		contractEnd:   new Date(2015, 0, 12),
+		newestContract: {
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2016, 10, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2016, 10, 1)
+		},
+		allContracts: [{
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2016, 10, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2016, 10, 1)
+			}
+		],
+		remaining:     undefined,
 		myClasses:     [1, 2]
 	};
 
 	var user5  = { 
 		name:          "Emily",
 		id:            5,
-		contractStart: new Date(2012, 0, 12),
-		contractEnd:   new Date(2015, 0, 12),
+		newestContract: {
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2015, 3, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2015, 3, 1)
+		},
+		allContracts: [{
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2015, 3, 1).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2015, 3, 1)
+			}
+		],
+		remaining:     undefined,
 		myClasses:     []
 	};
 
 	var user6  = { 
 		name:          "William",
 		id:            6,
-		contractStart: new Date(2013, 0, 12),
-		contractEnd:   new Date(2015, 0, 12),
+		newestContract: {
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2015, 7, 30).toString().substring(4,15),
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2015, 7, 30)
+		},
+		allContracts: [{
+			contractStartString: new Date(2012, 11, 1).toString().substring(4,15),
+			contractEndString:   new Date(2015, 7, 30).toString().substring(4,15),
+
+			contractStartDateFormat: new Date(2012, 11, 1),
+			contractEndDateFormat:   new Date(2016, 0, 1)
+			}
+		],
+		remaining:     undefined,
 		myClasses:     []
 	};
 
@@ -82,15 +169,18 @@ angular.module("HengillApp")
 		},
 		addNewUser: function addNewUser(userObject) {
 
-			var newUser  = { 
-				name:          userObject.newUserName,
-				id:            userObject.socialNumber,
-				contractStart: undefined,
-				contractEnd:   undefined,
-				myClasses:     []
-			};
+			// contractStart: new Date(2012, 11, 1).toString().substring(4,15)
 
-			mockUsers.push(newUser);
+			// var tempDate = userObject.newestContract;
+
+			userObject.newestContract.contractStartString = userObject.newestContract.contractStartDateFormat.toString().substring(4,15);
+			userObject.newestContract.contractEndString = userObject.newestContract.contractEndDateFormat.toString().substring(4,15);
+
+			userObject.allContracts.push(userObject.newestContract);
+
+			// userObject.newestContract = tempDate;
+
+			mockUsers.push(userObject);
 			return mockUsers;
 		},
 		editUser: function editUser(userObject, index) {
