@@ -1,5 +1,3 @@
-{{allUsers[0].newestContract.contractStartDateFormat | date:'medium'}}
-
 <button type="button" class="btn btn-default" ng-click="addNewUser()">Nýr notandi</button>
 
 <table class="table table-bordered table-striped table-responsive">
@@ -14,7 +12,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="u in allUsers">
-			<td class="clickable" ng-click="viewUser(u, $index)">{{u.name | limitTo:hehe}}</td>
+			<td class="clickable" ng-click="viewUser(u)">{{u.name | limitTo:hehe}}</td>
 			<td >{{u.newestContract.contractStartString | limitTo:dateLength}}</td>
 			<td>{{u.newestContract.contractEndString | limitTo:dateLength}}</td>
 			<td>{{u.remaining}}</td>

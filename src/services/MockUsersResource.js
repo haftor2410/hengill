@@ -183,8 +183,18 @@ angular.module("HengillApp")
 			mockUsers.push(userObject);
 			return mockUsers;
 		},
-		editUser: function editUser(userObject, index) {
-			mockUsers[index] = userObject;
+		editUser: function editUser(userObject) {
+			console.log("neeeeedddd thisisisisis", userObject);
+			for(var i = 0; i < mockUsers.length; i++){
+				if(mockUsers[i].id === userObject.id){
+
+					userObject.newestContract.contractStartString = userObject.newestContract.contractStartDateFormat.toString().substring(4,15);
+					userObject.newestContract.contractEndString = userObject.newestContract.contractEndDateFormat.toString().substring(4,15);
+					userObject.allContracts.push(userObject.newestContract);
+
+					mockUsers[i] = userObject;
+				}
+			}
 			return mockUsers;
 		}
 	};

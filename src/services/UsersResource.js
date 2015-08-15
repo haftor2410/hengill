@@ -43,8 +43,18 @@ angular.module("HengillApp")
 			mockUsers.push(userObject);
 			return mockUsers;
 		},
-		editUser: function editUser(userObject, index) {
-			mockUsers[index] = userObject;
+		editUser: function editUser(userObject) {
+			return {
+				success: function(fn) {
+					fn(MockUsersResource.editUser(userObject));
+					return {
+						error: function(fn) {
+							return;
+						}
+					};
+				}
+			};
+			mockUsers.push(userObject);
 			return mockUsers;
 		}
 	};

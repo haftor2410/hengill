@@ -60,15 +60,9 @@ angular.module("HengillApp").controller("AdminController", function ($scope, $mo
 		});
 	};
 
-	// $scope.newUserObject = {
-	// 	newUserName: undefined,
-	// 	socialNumber: undefined
-	// }
-
-
 	$scope.userObject  = { 
-		name:          "William",
-		id:            6,
+		name:          "",
+		id:            undefined,
 		newestContract: {
 			contractStartString: undefined,
 			contractEndString:   undefined,
@@ -89,9 +83,20 @@ angular.module("HengillApp").controller("AdminController", function ($scope, $mo
 	}
 
 
-	$scope.viewUser = function(user, index){
-		ViewUserDlg.show(user, index).then(function(){
-			console.log("kdbfljsdnflksndlfknasldkfna")
+	//TODO: má ekki velja hvaða dagsettningu sem er
+	// hafa newContract? eða bara uppfæra núverandi samning (það væri auðveldara)
+	$scope.viewUser = function(user){
+		ViewUserDlg.show(user).then(function(){
+			console.log("kdbfljsdnflksndlfknasldkfna");
+			UsersResource.editUser(user)
+			.success(function(data){
+				$scope.allUsers = data;
+
+			})
+			.error(function(){
+				//TODO
+			});
+
 		})
 	};
 
